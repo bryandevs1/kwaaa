@@ -10,11 +10,11 @@ import Gallery from "./gallery";
 const AppRoutes = [
     {
       path: "/",
-      element: <><HomePage1 /></>,
+      element: <><HomePage /></>,
     },
     {
       path: "/home",
-      element: <HomePage />
+      element: <HomePage1 />
     },
     {
       path: "/stream",

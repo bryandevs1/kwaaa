@@ -5,7 +5,7 @@ import logo from "./images/logo.png"
 
 import foimg1 from "./images/footer-img1.jpg"
 import foimg2 from "./images/footer-img2.jpg"
-import abimg from "./images/20230625_123438.jpg"
+import abimg from "./images/iji.jpg"
 import fig1 from "./images/content/fig1.jpg"
 import fig2 from "./images/content/fig2.jpg"
 import fig3 from "./images/content/fig3.jpg"
@@ -39,6 +39,18 @@ const GET_UPCOMINGEVENTS = gql`
 
 
 const HomePage = () => {
+  const [active, setActive] = useState("nav__menu");
+  const [icon, setIcon] = useState("nav__toggler");
+  const navToggle = () => {
+    if (active === "nav__menu") {
+      setActive("nav__menu nav__active");
+    } else setActive("nav__menu");
+
+    // Icon Toggler
+    if (icon === "nav__toggler") {
+      setIcon("nav__toggler toggle");
+    } else setIcon("nav__toggler");
+  };
 
   const [upcomingEvents, setUpcomingEvents] = useState([]);
 
@@ -113,10 +125,10 @@ const HomePage = () => {
 
     return (
       <>
-      {/* <PreLoader /> */}
+      <PreLoader />
       <div>
        <div className="wrapper-body">
-		     <div class="slider">
+		     <div class="">
          <Slider {...settings} ref={carouselRef}>
          {homepics.map((homepic, index) => (
           <img src={homepic.img} className='ihi' />
@@ -129,97 +141,86 @@ const HomePage = () => {
           
 
           <header>
-            <div className="header-top">
-              <div className="container">
-                <div className="row">
-                  <div className="header-top-left">
-                    <a target="_blank" href="https://web.facebook.com/kingdomwealthministry/"><SocialIcon network='facebook' style={{width: 20, height:20}} /></a>
-                    <a href="https://www.instagram.com/kingdomwealthministry/" target="_blank"><SocialIcon network='instagram' style={{width: 20, height:20}} /></a>
-                    <a href="https://www.youtube.com/@kingdomwealthministry_" target="_blank"><SocialIcon network='youtube' style={{height:20, width:20}} /></a>
-                    <a href="https://www.tiktok.com/@kingdomwealthministry" target="_blank"><SocialIcon network='tiktok' style={{width: 20, height:20}} /></a>
-                  </div>
-                  <div className="header-top-right">
-                    <Link to='/contact'><a className="top-wrap">Plan your visit</a></Link>
+          <>
+    <div className="header-top">
+    <div className="container">
+      <div className="row">
+        <div className="header-top-left">
+          <a target="_blank" href="https://web.facebook.com/kingdomwealthministry/">
+          <SocialIcon network='facebook' color='#fff' style={{width: 25, color:'white', height:25}} />          </a>
+          <a href="https://www.instagram.com/kingdomwealthministry/" target="_blank">
+          <SocialIcon network='instagram' style={{width: 25, height:25}} />          </a>
+          <a href="https://www.youtube.com/@kingdomwealthministry_" target="_blank">
+          <SocialIcon network='youtube' style={{width: 25, height:25}} />          </a>
+          <a href="https://www.tiktok.com/@kingdomwealthministry" target="_blank">
+          <SocialIcon network='tiktok' style={{width: 25, height:25}} />          </a>
+        </div>
+        <div className="header-top-right">
+                    <Link to='/contact' className='whitee'><a className="top-wrap whitee">Plan your visit</a></Link>
                     <Link to='/event'><a className="top-wrap">Calendar</a></Link>
                     <Link to='/contact'><a className="top-wrap">Donate Now</a></Link>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div className="menu">
+    <div className="container">
+      <div className="row">
 
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="menu">
-              <div className="container">
-                <div className="row">
-                  <div className="header-top-left">
-                    <Link to='/home'><a className="logo">
-                      <img src={logo} className="logor" alt="image" />
-                    </a>
+<nav className="nav">
+          <Link to='/home'><a className="logo">
+            <img src={logo} className="logor" alt="image" />
+          </a>
+          </Link>
+      <ul className={active}>
+
+      <li className='nav__item'>
+                    <Link to='/'>
+                    <a className='nav__link'>Home</a>
                     </Link>
-                  </div>
-                  <div className="header-top-right">
-                    <nav className="navbar">
-                      <div className="nav-wrapper">
-                        <div className="navbar-header">
-                          <button type="button" className="navbar-toggle">
-                            <span className="sr-only">Toggle navigation</span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                          </button>
-                        </div>
-                        <div className="overlay"></div>
-                        <div className="nav-menu">
-                          <a href="#" className="close"><i className="fa fa-times"></i></a>
-                          <ul className="nav navbar-nav menu-bar">
-                            <li>
-                              <Link to='/'>
-                              <a>Home</a>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to='/about'>
-                              <a>About us</a>
-                              </Link>
-                            </li>
-                            <li> <Link to='/sermon'><a>sermons</a></Link></li>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/about'>
+                    <a className='nav__link'>About</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/sermon'>
+                    <a className='nav__link'> Sermons</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/event'>
+                    <a className='nav__link'>Events</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/gallery'>
+                    <a className='nav__link'>gallery</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/stream'>
+                    <a className='nav__link'>stream</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/contact'>
+                    <a className='nav__link'>contact us</a>
+                    </Link>
+                  </li>
+      </ul>
+      <div onClick={navToggle} className={icon}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+    </nav>
 
-                            <li>
-                              <Link to='/event'>
-                              <a>Events</a>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to='/gallery'>
-                              <a>gallery</a>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to='/stream'>
-                              <a>Stream</a>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to='/contact'>
-                              <a>Contact Us</a>
-                              </Link>
-                            </li>
-
-                                                        
-                            
-
-                            <li>
-                              <a href="#" className="search-box-tablet"><i className="fa fa-search"></i></a>
-                              <input type="text" placeholder="Search" className="search-box-top" />
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="content">
+        </div>
+      </div>
+    </div>
+  </>            <div className="content">
               <div className="container">
                 <div className="row">
                   <div className="header-top-left"></div>

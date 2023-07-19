@@ -9708,7 +9708,7 @@ header .header-top-right a.btn:hover {
 
 header .header-top-right .top-wrap {
 	text-decoration: none;
-	color: #878787;
+	color: #fff;
 	padding: 0 10px;
 	position: relative;
 	text-transform: capitalize;
@@ -15291,6 +15291,9 @@ section.event-new aside.content .item-holder .item-container p {
 	list-style: none;
 	gap: 30px;
   }
+  .nav a:hover {
+	color: grey;
+  }
   .nav a {
 	font-size: 16px;
 	color: white;
@@ -15298,4 +15301,8 @@ section.event-new aside.content .item-holder .item-container p {
   .mt110 {
 	margin-top: 110px;
 	padding-top: 60px;
+  }
+
+  .whitee {
+	color: #fff;
   }

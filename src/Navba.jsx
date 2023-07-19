@@ -158,7 +158,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
       <ul className={active}>
 
       <li className='nav__item'>
-                    <Link to='/'>
+                    <Link to='/home'>
                     <a className='nav__link'>Home</a>
                     </Link>
                   </li>
