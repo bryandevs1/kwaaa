@@ -2,6 +2,14 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700");
 @import url("http://fonts.googleapis.com/css?family=Abril+Fatface:400");
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+	font-family: 'Poppins';
+}
+* {
+	font-family: Poppins;
+}
 .video-player {
 	width: 100%;
 	height: calc(100vh - 200px); 
@@ -9689,6 +9697,10 @@ header .header-top-right .close {
 
 header .header-top-right a.btn {
 	float: left;
+}
+header .header-top-right a{
+	float: right;
+	color: white;
 }
 header .header-top-right a.btn:hover {
 	float: left;
