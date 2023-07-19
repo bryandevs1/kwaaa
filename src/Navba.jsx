@@ -156,31 +156,42 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
           </a>
           </Link>
       <ul className={active}>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Home
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            About
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Portfolio
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Skills
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Contact
-          </a>
-        </li>
+
+      <li className='nav__item'>
+                    <Link to='/'>
+                    <a className='nav__link'>Home</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/about'>
+                    <a className='nav__link'>About</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/sermon'>
+                    <a className='nav__link'> Sermons</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/event'>
+                    <a className='nav__link'>Events</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/gallery'>
+                    <a className='nav__link'>gallery</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/stream'>
+                    <a className='nav__link'>stream</a>
+                    </Link>
+                  </li>
+                  <li className='nav__item'>
+                    <Link to='/contact'>
+                    <a className='nav__link'>contact us</a>
+                    </Link>
+                  </li>
       </ul>
       <div onClick={navToggle} className={icon}>
         <div className="line1"></div>

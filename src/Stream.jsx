@@ -74,7 +74,9 @@ useEffect(() => {
         <header className="s-header">
          <Navba />
        </header>
-       <section className="event mt10">
+       <section className="event mt110">
+        <div className="container mt110">
+          </div>
           <div className="container">
       <div className="row">
         <figure className="left-fig clearfix">

@@ -2446,8 +2446,7 @@ kbd kbd {
 }
 .logor {
     transform: scale(0.25);
-    position: absolute;
-    top: -215px;
+    position: relative;
 }
 
 .abcl {
@@ -2461,7 +2460,7 @@ kbd kbd {
 }
 @media (max-width:576px) {
     .logor {
-        left: -360%;
+		left: -100px;
     }
     .ligo {
         text-align: center;
@@ -2475,8 +2474,7 @@ kbd kbd {
         display: none;
     }
     .logor {
-
-        left: -230%;
+		left: -500px;
     }
     .overlay-event .modal-event {
 		width: 90vw
@@ -2485,11 +2483,13 @@ kbd kbd {
 		top: 15%;
         right:5%;
 	}
+	nav ul {
+		margin-left: -1000px;
+	}
 }
 @media (min-width:968px) {
     .logor {
-        top: -207px;
-        left: -150%;
+      left: -600px;
     }
     .ligo {
         display: block;
@@ -15209,6 +15209,9 @@ section.event-new aside.content .item-holder .item-container p {
 		display: none;
 	}
 }
+.nav__link {
+	text-transform: uppercase;
+}
 
 .nav {
 	display: flex;
@@ -15216,7 +15219,7 @@ section.event-new aside.content .item-holder .item-container p {
 	justify-content: space-around;
 	height: 12vh;
 	border-radius: 20px;
-	background: rgb(0, 33, 65);
+	background: transparent;
   }
   .nav__brand {
 	text-transform: uppercase;
@@ -15240,6 +15243,9 @@ section.event-new aside.content .item-holder .item-container p {
   }
   
   @media screen and (max-width: 768px) {
+	.nav {
+		border-radius: 0;
+	}
 	.nav__toggler {
 	  display: block;
 	  cursor: pointer;
@@ -15249,6 +15255,8 @@ section.event-new aside.content .item-holder .item-container p {
 	.nav__menu {
 	  position: fixed;
 	  top: 0vh;
+	  padding-top: 50px;
+	  padding-bottom: 50px;
 	  right: 0;
 	  height: 100vh;
 	  width: 100vw;
@@ -15277,4 +15285,17 @@ section.event-new aside.content .item-holder .item-container p {
   }
   .toggle .line3 {
 	transform: rotate(45deg) translate(-4px, -5px);
+  }
+
+  .nav ul {
+	list-style: none;
+	gap: 30px;
+  }
+  .nav a {
+	font-size: 16px;
+	color: white;
+  }
+  .mt110 {
+	margin-top: 110px;
+	padding-top: 60px;
   }
