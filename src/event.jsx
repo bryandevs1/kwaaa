@@ -105,33 +105,7 @@ const EventPage = () => {
       </header>
       <section className="gallery-page-wrapper events">
         <div className="container">
-          <ul className="menu-wrapper" id="menu">
-            <li>
-              <a href="#menu" data-filter="*" className="headline-lato selected">
-                select all
-              </a>
-            </li>
-            <li>
-              <a href="#menu" data-filter=".Celebrations" className="headline-lato">
-                Celebrations
-              </a>
-            </li>
-            <li>
-              <a href="#menu" data-filter=".Fests" className="headline-lato">
-                Fests
-              </a>
-            </li>
-            <li>
-              <a href="#menu" data-filter=".Meetings" className="headline-lato">
-                Meetings
-              </a>
-            </li>
-            <li>
-              <a href="#menu" data-filter=".Prayers" className="headline-lato">
-                Prayers
-              </a>
-            </li>
-          </ul>
+
           <div className="row">
             <div className="wrapper isp-wrap">
               <div className="clearfix" id="list-item">

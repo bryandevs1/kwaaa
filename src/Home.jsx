@@ -175,7 +175,7 @@ const HomePage = () => {
       <ul className={active}>
 
       <li className='nav__item'>
-                    <Link to='/'>
+                    <Link to='/home'>
                     <a className='nav__link'>Home</a>
                     </Link>
                   </li>
